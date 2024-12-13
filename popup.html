@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Review Analyzer</title>
+  <link href="styles/popup.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Review Analysis</h2>
+    </div>
+
+    <div class="stats">
+      <div class="stat-item">
+        <span class="label">Analyzed Reviews</span>
+        <span id="analyzed-count">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="label">Suspicious Reviews</span>
+        <span id="suspicious-count">0</span>
+      </div>
+    </div>
+
+    <button id="start-analysis" class="button">Start Analysis</button>
+    
+    <div class="legend">
+      <div class="legend-item">
+        <span class="dot genuine"></span>
+        <span>Genuine Review</span>
+      </div>
+      <div class="legend-item">
+        <span class="dot suspicious"></span>
+        <span>Suspicious Review</span>
+      </div>
+      <div class="legend-item">
+        <span class="dot fake"></span>
+        <span>Likely Fake</span>
+      </div>
+    </div>
+  </div>
+  <script src="src/popup/popup.js" type="module"></script>
+</body>
+</html>
