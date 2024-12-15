@@ -1,38 +1,24 @@
 {
     "manifest_version": 3,
-    "name": "Google Review Analyzer",
-    "version": "1.0.0",
-    "description": "Analyzes Google reviews to identify potentially fake or suspicious reviews",
-    "permissions": [
-      "activeTab",
-      "storage"
-    ],
+    "name": "Google Fake Review Identifier",
+    "version": "1.0",
+    "description": "Identifies potentially fake reviews on Google",
+    "permissions": ["activeTab"],
     "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "assets/icon16.jpg",
-        "48": "assets/icon48.jpg",
-        "128": "assets/icon128.jpg"
-      }
-    },
-    "icons": {
-        "16": "assets/icon16.jpg",
-        "48": "assets/icon48.jpg",
-      "128": "assets/icon128.jpg"
+      "default_popup": "popup.html"
     },
     "content_scripts": [
       {
-        "matches": ["*://*.google.com/maps/place/*"],
-        "js": [
-          "src/content/reviewAnalyzer.js",
-          "src/content/reviewObserver.js",
-          "src/content/contentScript.js"
-        ],
-        "css": ["styles/content.css"]
+        "matches": ["https://www.google.com/*"],
+        "js": ["content-script.js"],
+        "css": ["content-styles.css"]
       }
     ],
-    "background": {
-      "service_worker": "src/background/background.js",
-      "type": "module"
+    "icons": {
+      "16": "icon16.jpg",
+      "48": "icon48.jpg",
+      "128": "icon128.jpg"
     }
   }
+  
+  

@@ -1,43 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Google Review Analyzer</title>
-  <link href="styles/popup.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Review Identifier</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h2>Review Analysis</h2>
+    <div class="container">
+        <h1>Fake Review Identifier</h1>
+        <div id="content">
+            <p id="instructions">Click the button below to start analyzing reviews on the current page.</p>
+            <div id="results" class="hidden">
+                <p><span id="fakeCount">0</span> Fake reviews</p>
+                <p><span id="suspiciousCount">0</span> Suspicious reviews</p>
+                <p><span id="genuineCount">0</span> Genuine reviews</p>
+            </div>
+            <button id="startAnalysis">Start Analysis</button>
+        </div>
     </div>
-
-    <div class="stats">
-      <div class="stat-item">
-        <span class="label">Analyzed Reviews</span>
-        <span id="analyzed-count">0</span>
-      </div>
-      <div class="stat-item">
-        <span class="label">Suspicious Reviews</span>
-        <span id="suspicious-count">0</span>
-      </div>
-    </div>
-
-    <button id="start-analysis" class="button">Start Analysis</button>
-    
-    <div class="legend">
-      <div class="legend-item">
-        <span class="dot genuine"></span>
-        <span>Genuine Review</span>
-      </div>
-      <div class="legend-item">
-        <span class="dot suspicious"></span>
-        <span>Suspicious Review</span>
-      </div>
-      <div class="legend-item">
-        <span class="dot fake"></span>
-        <span>Likely Fake</span>
-      </div>
-    </div>
-  </div>
-  <script src="src/popup/popup.js" type="module"></script>
+    <script src="popup.js"></script>
 </body>
 </html>
+

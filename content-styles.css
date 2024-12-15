@@ -1,0 +1,63 @@
+.review-highlight-fake {
+    border: 2px solid #ff4444;
+    background-color: rgba(255, 68, 68, 0.1);
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.review-highlight-suspicious {
+    border: 2px solid #ffbb33;
+    background-color: rgba(255, 187, 51, 0.1);
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.review-highlight-genuine {
+    border: 2px solid #00C851;
+    background-color: rgba(0, 200, 81, 0.1);
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.status-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.status-icon.fake {
+    background-color: #ff4444;
+    color: white;
+}
+
+.status-icon.suspicious {
+    background-color: #ffbb33;
+    color: white;
+}
+
+.status-icon.genuine {
+    background-color: #00C851;
+    color: white;
+}
+
+.reason-tooltip {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    color: white;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    max-width: 200px;
+    z-index: 1000;
+}
+
+.review-full-text:hover + .reason-tooltip {
+    display: block;
+}
+
